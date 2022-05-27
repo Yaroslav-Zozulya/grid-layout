@@ -1,0 +1,37 @@
+.grid__body {
+  display: grid;
+  grid-template-columns: fit-content(400px) 1fr auto;
+  grid-template-rows: repeat(2, 1fr);
+}
+.grid__item {
+  text-align: center;
+  border: 2px dashed grey;
+  padding: 30px;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 100px 1fr;
+  grid-template-areas:
+    'header header'
+    'side content';
+}
+.grid-header {
+  grid-area: header;
+}
+.grid-side {
+  grid-area: side;
+}
+
+.grid-content {
+  grid-area: content;
+}
+
+.grid-header,
+.grid-side,
+.grid-content {
+  padding: 30px;
+  border: 2px dashed gray;
+  margin: 0 0 15px 0;
+}
